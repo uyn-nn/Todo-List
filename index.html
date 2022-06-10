@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,12 +9,23 @@
     <title>Todo List</title>
 </head>
 <body>
-    <h2>To dooooo</h2>
-    <button id="all" onclick="all()">Tất cả: 0</button>
-    <button id="done" onclick="complete()">Đã hoàn thành: 0</button>
-    <button id="undone" onclick="incomplete()">Chưa hoàn thành: 0</button><br><br>
-    <input type="text" id="inputValue" placeholder="Nhập..." >
-    <input type="submit" id="btnAdd" value="Thêm">
-    <script src="main.js"></script>
+    <h1>Tác vụ</h1>
+    <div id="tasker" class="container">
+        <button id="all" onclick="totalTask()">Tất cả: 0</button>
+        <button id="done" onclick="doneTask()">Đã hoàn thành: 0</button>
+        <button id="notDone" onclick="notDoneTask()">Chưa hoàn thành: 0</button><br><br>
+        <div id="tasker-header" class="tasker-header"></div>
+        <input type="text" id="inputValue" class="newTask" placeholder="Nhập..." >
+        <button id="addBtn" class="addbtn" onclick="addContentElement()" disabled="disabled" title="Thêm tác vụ vừa nhập">Thêm</button><br>
+        <input type="text" id="searchTask" onkeyup="searchElement()" placeholder="Nhập từ khóa tìm kiếm...">
+        
+        <div>
+            <input type="checkbox" id="selectAll">
+            <label for="selectAll">Chọn tất cả</label></br>
+            <div id="tasks" class="taskList" ></div>
+        </div>
+        <button id="clearAll" onclick="clearAll()">Xóa tất cả</button>
+    </div>
+    <script type="text/javascript" src="main.js"></script>
 </body>
-</html>
+</html> 
